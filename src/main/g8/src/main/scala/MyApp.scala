@@ -11,7 +11,7 @@ object MyApp {
     val recent =
       for (xml <- Http(rec OK as.xml.Elem))
         yield for {
-          elem <- xml \\ "rc"
+          elem <- xml \\\\ "rc"
           attr <- elem.attribute("title") 
         } yield attr.toString
     val last = for (titles <- recent)
