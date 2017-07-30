@@ -9,7 +9,7 @@ object MyApp {
                           "rclimit" -> "1",
                           "format" -> "xml")
     val recent =
-      for (xml <- Http(rec OK as.xml.Elem))
+      for (xml <- Http.default(rec OK as.xml.Elem))
         yield for {
           elem <- xml \\\\ "rc"
           attr <- elem.attribute("title") 
