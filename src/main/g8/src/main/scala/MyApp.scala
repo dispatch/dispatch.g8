@@ -2,7 +2,7 @@ import dispatch._, Defaults._
 
 object MyApp {
   def main(args: Array[String]) {
-    val svc = url("http://en.wikipedia.org/w/api.php")
+    val svc = url("https://en.wikipedia.org/w/api.php")
     val rec = svc <<? Map("action" -> "query",
                           "list" -> "recentchanges",
                           "rcprop" -> "title",
