@@ -1,4 +1,4 @@
-import dispatch._
+import dispatch._, Defaults._
 
 object MyApp {
   def main(args: Array[String]) {
@@ -18,6 +18,6 @@ object MyApp {
       yield titles.headOption.getOrElse("-nothing-")
     println("The last Wikipedia edit was to '%s'".format(last()))
 
-    Http.shutdown()
+    Http.default.shutdown()
   }
 }
